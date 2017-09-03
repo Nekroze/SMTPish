@@ -2,6 +2,8 @@
 
 Converts old school email into some more modern forms of communication such as slack or kafka.
 
+Providing a an SMTP service that will take in messages without authentication or security (on its own) and convert them into messages for one or multiple target destinations, such as slack.
+
 ## Design
 
 ### Supervision Tree
