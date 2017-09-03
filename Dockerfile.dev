@@ -1,0 +1,6 @@
+FROM elixir:1.5 as builder
+
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
+RUN apt-get -qq update \
+ && apt-get -qq install git build-essential inotify-tools

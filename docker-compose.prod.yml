@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  smtpish:
+    extends:
+      file: docker-compose.yml
+      service: smtpish
+    build: .

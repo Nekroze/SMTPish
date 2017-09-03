@@ -1,0 +1,8 @@
+image: elixir:1.5
+
+before_script:
+  - mix init
+
+test:
+  script:
+  - mix test

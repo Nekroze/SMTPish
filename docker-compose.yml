@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  generator:
+    volumes:
+      - ./test/logstash-pipeline.conf:/usr/share/logstash/pipeline/generator.conf
+    environment:
+      XPACK_MONITORING_ENABLED: "false"
+    network_mode: "service:smtpish"
+    build:
+      context: test
+      dockerfile: logstash-dockerfile
+
+  smtpish:
+    environment:
+      PORT: 2500
+      TARGETS: echo
+      LOG_LEVEL: warn
+      WHITELIST_FROM: "monitor@dev"
+    restart: always

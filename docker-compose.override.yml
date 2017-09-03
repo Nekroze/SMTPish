@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  smtpish:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    working_dir: /app
+    volumes:
+      - .:/app
+    entrypoint: mix develop
+    environment:
+      TARGETS: echo,fail
+      LOG_LEVEL: debug
