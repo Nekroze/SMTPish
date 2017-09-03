@@ -32,7 +32,8 @@ defmodule SMTPish.Mixfile do
       {:slack, "~> 0.12.0"},
       {:honeydew, "~> 1.0.1"},
       {:exsync, "~> 0.2.0", only: :dev},
-      {:distillery, "~> 1.4", runtime: false}
+      {:distillery, "~> 1.4", runtime: false},
+      {:junit_formatter, "~> 1.3", only: [:test]},
     ]
   end
 

@@ -12,3 +12,5 @@ jobs:
       - checkout
       - run: mix init
       - run: mix test
+      - store_test_results:
+          path: _build/test/lib/smtpish/test-junit-report.xml
