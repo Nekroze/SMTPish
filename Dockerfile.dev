@@ -4,3 +4,4 @@ ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 RUN apt-get -qq update \
  && apt-get -qq install git build-essential inotify-tools
+ENV MIX_ENV dev

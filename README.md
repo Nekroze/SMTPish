@@ -37,7 +37,7 @@ A docker image can be built off of this repo with the following command:
 And for usage:
 
 ```
- $ docker run --name smtpish -p 2500 smtpish
+ $ docker run --name smtpish -p 25:2500 smtpish
 ```
 
 The following environment variables are available for control:

@@ -11,7 +11,7 @@ defmodule SMTPish.Application do
     case Code.ensure_loaded(ExSync) do
       {:module, ExSync} ->
         ExSync.start()
-      {:error, :nofile} ->
+      {:error, _} ->
         :ok
     end
 

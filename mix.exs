@@ -6,6 +6,7 @@ defmodule SMTPish.Mixfile do
       app: :smtpish,
       version: "1.0.0",
       elixir: "~> 1.4",
+      build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -31,11 +32,13 @@ defmodule SMTPish.Mixfile do
       {:slack, "~> 0.12.0"},
       {:honeydew, "~> 1.0.1"},
       {:exsync, "~> 0.2.0", only: :dev},
+      {:distillery, "~> 1.4", runtime: false}
     ]
   end
 
   defp aliases() do
     [
+      "prodish": ["init", "compose up"],
       "develop": ["init", "run --no-halt"],
       "init": ["local.hex --force", "local.rebar --force", "deps.get"],
     ]
