@@ -32,7 +32,7 @@ Blue lines represent message flow from process to process.
 
 ## Usage
 
-A docker image can be built off of this repo with the following command:
+Can be used from [Docker Hub](https://hub.docker.com/r/nekroze/smtpish) or a docker image can be built off of this repo with the following command:
 
 ```
  $ docker build -t smtpish .
