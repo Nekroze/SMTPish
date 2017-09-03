@@ -5,7 +5,7 @@ defmodule SMTPish.Mixfile do
     [
       app: :smtpish,
       version: "1.0.0",
-      elixir: "~> 1.4",
+      elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       aliases: aliases(),
